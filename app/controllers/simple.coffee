@@ -1,23 +1,28 @@
 App.EmberTableSimpleController = Ember.Controller.extend
   numRows: 100
+  sortColumn: null
 
   columns: Ember.computed ->
     dateColumn = Ember.Table.ColumnDefinition.create
       columnWidth: 150
       textAlign: 'text-align-left'
       headerCellName: 'Date'
+      isSortable: no
       getCellContent: (row) -> row['date'].toDateString();
     openColumn = Ember.Table.ColumnDefinition.create
       columnWidth: 100
       headerCellName: 'Open'
+      isSortable: no
       getCellContent: (row) -> row['open'].toFixed(2)
     highColumn = Ember.Table.ColumnDefinition.create
       columnWidth: 100
       headerCellName: 'High'
+      isSortable: yes
       getCellContent: (row) -> row['high'].toFixed(2)
     lowColumn = Ember.Table.ColumnDefinition.create
       columnWidth: 100
       headerCellName: 'Low'
+      isSortable: yes
       getCellContent: (row) -> row['low'].toFixed(2)
     closeColumn = Ember.Table.ColumnDefinition.create
       columnWidth: 100
@@ -26,7 +31,7 @@ App.EmberTableSimpleController = Ember.Controller.extend
     [dateColumn, openColumn, highColumn, lowColumn, closeColumn]
 
   content: Ember.computed ->
-    [0...@get('numRows')].map (index) ->
+    randomContent = [0...@get('numRows')].map (index) ->
       date = new Date()
       date.setDate(date.getDate() + index)
       date:  date
@@ -35,4 +40,17 @@ App.EmberTableSimpleController = Ember.Controller.extend
       low:   Math.random() * 100 - 50
       close: Math.random() * 100 - 50
       volume: Math.random() * 1000000
-  .property 'numRows'
+
+    col = @get('sortColumn')
+    if col
+      randomContent.sort((a, b) -> col.getCellContent(b) - col.getCellContent(a))
+
+    randomContent
+  .property 'numRows', 'sortColumn'
+
+  actions:
+    sortHigh: ->
+      @set 'sortColumn', @get('columns')[2]
+
+    sortLow: ->
+      @set 'sortColumn', @get('columns')[3]

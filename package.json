@@ -24,7 +24,7 @@
     "grunt-jsdoc": "*",
     "grunt-neuter": "~0.4.0",
     "grunt-shell": "*",
-    "grunt-release-component": "0.0.3",
+    "grunt-release-component": "git://github.com/walmartlabs/grunt-release-component#9841d3efe6b53844e457d407c95e0ade00c76fb2",
     "node-static": "*",
     "lockdown": "0.0.5"
   }

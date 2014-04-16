@@ -15,6 +15,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-ember-templates');
   grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-neuter');
+  grunt.loadNpmTasks('grunt-release-component');
 
   // Project configuration.
   grunt.initConfig({
@@ -137,7 +138,19 @@ module.exports = function (grunt) {
             dest: 'gh_pages/css'
           }, {
             expand: true,
-            cwd: 'dependencies/font-awesome/font/',
+            flatten: true,
+            cwd: 'bower_components/',
+            src: ['**/*.js'],
+            dest: 'gh_pages/lib'
+          }, {
+            expand: true,
+            flatten: true,
+            cwd: 'bower_components/',
+            src: ['**/*.css'],
+            dest: 'gh_pages/css'
+          }, {
+            expand: true,
+            cwd: 'bower_components/font-awesome/font/',
             src: ['**'],
             dest: 'gh_pages/font'
           }, {
@@ -165,6 +178,18 @@ module.exports = function (grunt) {
             expand: true,
             flatten: true,
             cwd: 'dependencies/',
+            src: ['**/*.css'],
+            dest: 'tests/css'
+          }, {
+            expand: true,
+            flatten: true,
+            cwd: 'bower_components/',
+            src: ['**/*.js'],
+            dest: 'tests/lib'
+          }, {
+            expand: true,
+            flatten: true,
+            cwd: 'bower_components/',
             src: ['**/*.css'],
             dest: 'tests/css'
           }
@@ -201,7 +226,7 @@ module.exports = function (grunt) {
         tasks: ["default"]
       },
       code: {
-        files: ["src/**/*.coffee", "app/**/*.coffee", "dependencies/**/*.js"],
+        files: ["src/**/*.coffee", "app/**/*.coffee", "dependencies/**/*.js", "bower_components/**/*.js"],
         tasks: ["coffee", "neuter"]
       },
       handlebars: {
@@ -215,6 +240,17 @@ module.exports = function (grunt) {
       copy: {
         files: ["app/index.html"],
         tasks: ["copy"]
+      }
+    },
+
+    'release-component': {
+      options: {
+        componentRepo: 'git@github.com:azirbel/ember-table-shim.git',
+        copy: {
+          'dist/ember-table.js': 'ember-table.js',
+          'dist/ember-table.min.js': 'ember-table.min.js',
+          'dist/ember-table.css': 'ember-table.css'
+        }
       }
     }
   });

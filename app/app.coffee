@@ -1,6 +1,6 @@
 # Ember-Table Dependencies
 require 'bower_components/bootstrap/dist/js/bootstrap'
-require 'dependencies/antiscroll/antiscroll'
+require 'bower_components/antiscroll'
 require 'dependencies/ember-addepar-mixins/resize_handler'
 require 'dependencies/ember-addepar-mixins/style_bindings'
 require 'dist/ember-table'

@@ -16,6 +16,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-neuter');
   grunt.loadNpmTasks('grunt-banner');
+  grunt.loadNpmTasks('grunt-text-replace');
 
   // Project configuration.
   grunt.initConfig({
@@ -223,13 +224,32 @@ module.exports = function (grunt) {
     usebanner: {
       dist: {
         options: {
-          banner: '/*!\n* <%= pkg.name %> v<%=pkg.version%>\n' + 
+          banner: '/*!\n* <%=pkg.name %> v<%=pkg.version%>\n' + 
             '* Copyright <%=grunt.template.today("yyyy")%> Addepar Inc.\n' +
             '* See LICENSE.\n*/',
         },
         files: {
           src: ['dist/*']
         }
+      }
+    },
+
+    replace: {
+      global_version: {
+        src: ['VERSION'],
+        overwrite: true,
+        replacements: [{
+          from: /.*\..*\..*/,
+          to: '<%=pkg.version%>'
+        }]
+      },
+      main_coffee_version: {
+        src: ['src/main.coffee'],
+        overwrite: true,
+        replacements: [{
+          from: /Ember.Table.VERSION = '.*\..*\..*'/,
+          to: "Ember.Table.VERSION = '<%=pkg.version%>'"
+        }]
       }
     },
 
@@ -262,6 +282,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask("build_app", ["coffee:app", "emberTemplates", "neuter"]);
 
-  grunt.registerTask("default", ["build_srcs", "build_app", "less", "copy", "uglify", "usebanner", "watch"]);
+  grunt.registerTask("dist", ["replace", "build_srcs", "build_app", "less", "copy", "uglify", "usebanner"]);
 
+  grunt.registerTask("default", ["replace", "build_srcs", "build_app", "less", "copy", "uglify", "usebanner", "watch"]);
 };
+

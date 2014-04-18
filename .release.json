@@ -8,7 +8,7 @@
   "commitMessage": "Release %s",
   "tagName": "v%s",
   "tagAnnotation": "Release %s",
-  "buildCommand": false,
+  "buildCommand": "grunt dist",
   "distRepo": "git://github.com/azirbel/ember-table-shim",
   "distStageDir": ".stage",
   "distBase": "dist",

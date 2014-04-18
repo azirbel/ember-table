@@ -38,6 +38,11 @@ Hit up : `http://localhost:8000/examples`
 * Support for colspan and rowspan
 * Switch to ember/list-view for lazy rendering
 
+### Maintainers
+Update version numbers and release (to this repository and the dist repository), using https://github.com/webpro/release-it:
+* npm install -g release-it
+* release
+
 ### Copyright and License
 Copyright © 2013 Addepar, Inc. All Rights Reserved
 

@@ -1,21 +1,23 @@
 {
   "name": "ember-table",
   "version": "0.0.8",
+  "description": "Table built using ember.js that lazily renders rows.",
+  "keywords": [
+    "ember",
+    "ember-table"
+  ],
   "ignore": [
-    ".gitignore",
-    ".jshintrc",
     "app",
-    "build",
     "dependencies",
-    "gh_pages",
-    "node_modules",
     "src",
     "tests",
+    ".gitignore",
     "bower.json",
     "CHANGELOG",
-    "examples.js",
     "Gruntfile.js",
     "LICENSE",
+    "README.md",
+    "examples.js",
     "lockdown.json",
     "package.json"
   ],

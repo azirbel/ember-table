@@ -15,7 +15,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-ember-templates');
   grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-neuter');
-  grunt.loadNpmTasks('grunt-release-component');
+  grunt.loadNpmTasks('grunt-banner');
 
   // Project configuration.
   grunt.initConfig({
@@ -67,7 +67,7 @@ module.exports = function (grunt) {
     },
 
     neuter: {
-      options:{
+      options: {
         includeSourceURL: false,
         separator: "\n"
       },
@@ -204,7 +204,6 @@ module.exports = function (grunt) {
     uglify: {
       file: {
         options: {
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
           preserveComments: false,
           beautify: false,
           mangle: true,
@@ -216,6 +215,20 @@ module.exports = function (grunt) {
             // Include dist in bundle
             './dist/ember-table.js'
           ]
+        }
+      }
+    },
+
+    // Add a banner to dist files
+    usebanner: {
+      dist: {
+        options: {
+          banner: '/*!\n* <%= pkg.name %> v<%=pkg.version%>\n' + 
+            '* Copyright <%=grunt.template.today("yyyy")%> Addepar Inc.\n' +
+            '* See LICENSE.\n*/',
+        },
+        files: {
+          src: ['dist/*']
         }
       }
     },
@@ -242,17 +255,6 @@ module.exports = function (grunt) {
         tasks: ["copy"]
       }
     },
-
-    'release-component': {
-      options: {
-        componentRepo: 'git@github.com:azirbel/ember-table-shim.git',
-        copy: {
-          'dist/ember-table.js': 'ember-table.js',
-          'dist/ember-table.min.js': 'ember-table.min.js',
-          'dist/ember-table.css': 'ember-table.css'
-        }
-      }
-    }
   });
 
   // Default tasks.
@@ -260,6 +262,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask("build_app", ["coffee:app", "emberTemplates", "neuter"]);
 
-  grunt.registerTask("default", ["build_srcs", "build_app", "less", "copy", "uglify", "watch"]);
+  grunt.registerTask("default", ["build_srcs", "build_app", "less", "copy", "uglify", "usebanner", "watch"]);
 
 };

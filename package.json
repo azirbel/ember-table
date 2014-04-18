@@ -26,6 +26,7 @@
     "grunt-shell": "*",
     "grunt-release-component": "git://github.com/walmartlabs/grunt-release-component#9841d3efe6b53844e457d407c95e0ade00c76fb2",
     "node-static": "*",
-    "lockdown": "0.0.5"
+    "lockdown": "0.0.5",
+    "grunt-banner": "~0.2.2"
   }
 }

@@ -40,8 +40,11 @@ Hit up : `http://localhost:8000/examples`
 
 ### Maintainers
 Update version numbers and release (to this repository and the dist repository), using https://github.com/webpro/release-it:
-* npm install -g release-it
-* release
+```
+$ npm install -g release-it
+$ alias release="release-it"
+$ release <options>
+```
 
 ### Copyright and License
 Copyright © 2013 Addepar, Inc. All Rights Reserved

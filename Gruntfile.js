@@ -139,18 +139,6 @@ module.exports = function (grunt) {
             dest: 'gh_pages/css'
           }, {
             expand: true,
-            flatten: true,
-            cwd: 'bower_components/',
-            src: ['**/*.js'],
-            dest: 'gh_pages/lib'
-          }, {
-            expand: true,
-            flatten: true,
-            cwd: 'bower_components/',
-            src: ['**/*.css'],
-            dest: 'gh_pages/css'
-          }, {
-            expand: true,
             cwd: 'bower_components/font-awesome/font/',
             src: ['**'],
             dest: 'gh_pages/font'
@@ -181,18 +169,6 @@ module.exports = function (grunt) {
             cwd: 'dependencies/',
             src: ['**/*.css'],
             dest: 'tests/css'
-          }, {
-            expand: true,
-            flatten: true,
-            cwd: 'bower_components/',
-            src: ['**/*.js'],
-            dest: 'tests/lib'
-          }, {
-            expand: true,
-            flatten: true,
-            cwd: 'bower_components/',
-            src: ['**/*.css'],
-            dest: 'tests/css'
           }
         ]
       }
@@ -220,11 +196,11 @@ module.exports = function (grunt) {
       }
     },
 
-    // Add a banner to dist files
+    // Add a banner to dist files which includes version & year of release
     usebanner: {
       dist: {
         options: {
-          banner: '/*!\n* <%=pkg.name %> v<%=pkg.version%>\n' + 
+          banner: '/*!\n* <%=pkg.name %> v<%=pkg.version%>\n' +
             '* Copyright <%=grunt.template.today("yyyy")%> Addepar Inc.\n' +
             '* See LICENSE.\n*/',
         },

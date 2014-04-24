@@ -1,10 +1,15 @@
 {
   "name": "ember-table",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Table built using ember.js that lazily renders rows.",
   "keywords": [
     "ember",
     "ember-table"
+  ],
+  "main": [
+    "./dist/ember-table.css",
+    "./dist/ember-table.js",
+    "./dist/ember-table.min.js"
   ],
   "ignore": [
     "app",

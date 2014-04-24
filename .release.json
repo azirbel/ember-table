@@ -11,8 +11,7 @@
   "buildCommand": "grunt dist",
   "distRepo": "git://github.com/azirbel/ember-table-shim",
   "distStageDir": ".stage",
-  "distBase": "dist",
-  "distFiles": ["**/*"],
+  "distBase": "",
+  "distFiles": ["dist/**/*"],
   "publish": false
 }
-

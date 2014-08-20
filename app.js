@@ -2840,7 +2840,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 Ember.Table = Ember.Namespace.create();
 
-Ember.Table.VERSION = '0.2.14';
+Ember.Table.VERSION = '0.2.15';
 
 if ((_ref = Ember.libraries) != null) {
   _ref.register('Ember Table', Ember.Table.VERSION);
@@ -18276,7 +18276,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '';
 
 
-  data.buffer.push("\n<div class=\"col-md-10 col-md-offset-2 left-border main-content-container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <h1>Community Examples</h1>\n      <p class=\"elevated\">Many people have extended ember-table to add new features or customize the way the table works with their app. We hope this list of community-built examples helps to provide inspiration and share commonly used design patterns.<br><br>This is a new list, and we're looking for more examples to add.<br>If you're willing to share your work here, please <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/issues\">open a GitHub ticket!</a></p>\n      <div class=\"row ember-table-examples\">\n        <div class=\"col-md-4\">\n          <h4 class=\"byline\">Server-side Sorting</h4>\n          <p class=\"byline\">By <a target=\"_BLANK\" href=\"https://github.com/seriousben\">seriousben</a></p>\n          <a target=\"_BLANK\" href=\"http://jsbin.com/nefiwoco/15/edit\">\n            <img class=\"preview-box\" src=\"/gh_pages/img/community_examples/preview_server_side_sorting.png\" />\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
+  data.buffer.push("\n<div class=\"col-md-10 col-md-offset-2 left-border main-content-container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <h1>Community Examples</h1>\n      <p class=\"elevated\">Many people have extended ember-table to add new features or customize the way the table works with their app. We hope this list of community-built examples helps to provide inspiration and share commonly used design patterns.<br><br>This is a new list, and we're looking for more examples to add.<br>If you're willing to share your work here, please <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/issues\">open a GitHub ticket!</a></p>\n      <div class=\"row ember-table-examples\">\n        <div class=\"col-md-4\">\n          <h4 class=\"byline\">Server-side Sorting</h4>\n          <p class=\"byline\">By <a target=\"_BLANK\" href=\"https://github.com/seriousben\">seriousben</a></p>\n          <a target=\"_BLANK\" href=\"http://jsbin.com/nefiwoco/15/edit\">\n            <img class=\"preview-box\" src=\"img/community_examples/preview_server_side_sorting.png\" />\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n");
   return buffer;
   
 });
@@ -18527,55 +18527,55 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Hello World Table</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_simple.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Hello World Table</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_simple.png\" />\n          </div>\n        ");
   }
 
 function program3(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>AJAX cells</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_ajax.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>AJAX cells</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_ajax.png\" />\n          </div>\n        ");
   }
 
 function program5(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Bar cells</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_bars.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Bar cells</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_bars.png\" />\n          </div>\n        ");
   }
 
 function program7(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Dynamic bar cells</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_dynamic_bars.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Dynamic bar cells</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_dynamic_bars.png\" />\n          </div>\n        ");
   }
 
 function program9(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Tree & financial table</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_financial.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Tree & financial table</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_financial.png\" />\n          </div>\n        ");
   }
 
 function program11(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Editable cell</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_editable.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Editable cell</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_editable.png\" />\n          </div>\n        ");
   }
 
 function program13(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Sparkline cell using D3.js</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_sparkline.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Sparkline cell using D3.js</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_sparkline.png\" />\n          </div>\n        ");
   }
 
 function program15(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Horizon cell using D3.js</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_horizon.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Horizon cell using D3.js</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_horizon.png\" />\n          </div>\n        ");
   }
 
 function program17(depth0,data) {
   
   
-  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Fluid table</h4>\n            <img class=\"preview-box\" src=\"/gh_pages/img/preview_table_simple.png\" />\n          </div>\n        ");
+  data.buffer.push("\n          <div class=\"col-md-4\">\n            <h4>Fluid table</h4>\n            <img class=\"preview-box\" src=\"img/preview_table_simple.png\" />\n          </div>\n        ");
   }
 
 function program19(depth0,data) {
@@ -18618,7 +18618,7 @@ function program19(depth0,data) {
   data.buffer.push("\n      </div>\n      <p>Looking for more ways to extend ember-table? Check out the ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(19, program19, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "emberTable.community-examples", options) : helperMissing.call(depth0, "link-to", "emberTable.community-examples", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push(".</p>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Getting Started</h1>\n      <p>You will need <a target=\"_BLANK\" href=\"http://nodejs.org/\">node</a> installed as a development dependency.</p>\n      <p><a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/\">Clone it from Github</a> or <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/releases\">download the ZIP repo</a></p>\n      <div class=\"highlight\">\n<pre><code>$ npm install -g grunt-cli\n$ npm install\n$ grunt\n$ node examples.js</code></pre>\n      <p>Go to your browser and navigate to <a target=\"_BLANK\" href=\"http://localhost:8000/gh_pages\">localhost:8000/gh_pages</a></p>\n      </div>\n    </div>\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Contributing</h1>\n      <p>You can contribute to this project in one of two ways:\n      <ul class=\"styled\">\n        <li>Browse the ember-table <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/issues?state=open\">issues</a> and report bugs</li>\n        <li>Clone the ember-table repo, make some changes according to our development guidelines and issue a pull-request with your changes.</li>\n      </ul>\n      <p>We keep the ember-table.js code to the minimum necessary, giving users as much control as possible.</p>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Changelog</h1>\n      <p>The current version is 0.2.14.\n      <p>For the full list of changes, please see <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/blob/master/CHANGELOG.md\">CHANGELOG.md</a>.</p>\n    </div>\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Acknowledgements</h1>\n      <p><a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/graphs/contributors\">List of Contributors on Github</a></p>\n      <p>With lots of help from the Ember.js team</p>\n      <p><a target=\"_BLANK\" href=\"https://twitter.com/ebryn\">ebryn</a>, <a target=\"_BLANK\" href=\"https://twitter.com/tomdale\">tomdale</a>, <a target=\"_BLANK\" href=\"https://twitter.com/wycats\">wycats</a></p>\n      <p>The original idea for lazy rendering was inspired by Erik Bryn.</p>\n    </div>\n  </div>\n</div>\n");
+  data.buffer.push(".</p>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Getting Started</h1>\n      <p>You will need <a target=\"_BLANK\" href=\"http://nodejs.org/\">node</a> installed as a development dependency.</p>\n      <p><a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/\">Clone it from Github</a> or <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/releases\">download the ZIP repo</a></p>\n      <div class=\"highlight\">\n<pre><code>$ npm install -g grunt-cli\n$ npm install\n$ grunt\n$ node examples.js</code></pre>\n      <p>Go to your browser and navigate to <a target=\"_BLANK\" href=\"http://localhost:8000/gh_pages\">localhost:8000/gh_pages</a></p>\n      </div>\n    </div>\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Contributing</h1>\n      <p>You can contribute to this project in one of two ways:\n      <ul class=\"styled\">\n        <li>Browse the ember-table <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/issues?state=open\">issues</a> and report bugs</li>\n        <li>Clone the ember-table repo, make some changes according to our development guidelines and issue a pull-request with your changes.</li>\n      </ul>\n      <p>We keep the ember-table.js code to the minimum necessary, giving users as much control as possible.</p>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Changelog</h1>\n      <p>The current version is 0.2.15.\n      <p>For the full list of changes, please see <a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/blob/master/CHANGELOG.md\">CHANGELOG.md</a>.</p>\n    </div>\n    <div class=\"col-md-6\">\n      <hr>\n      <h1>Acknowledgements</h1>\n      <p><a target=\"_BLANK\" href=\"https://github.com/Addepar/ember-table/graphs/contributors\">List of Contributors on Github</a></p>\n      <p>With lots of help from the Ember.js team</p>\n      <p><a target=\"_BLANK\" href=\"https://twitter.com/ebryn\">ebryn</a>, <a target=\"_BLANK\" href=\"https://twitter.com/tomdale\">tomdale</a>, <a target=\"_BLANK\" href=\"https://twitter.com/wycats\">wycats</a></p>\n      <p>The original idea for lazy rendering was inspired by Erik Bryn.</p>\n    </div>\n  </div>\n</div>\n");
   return buffer;
   
 });

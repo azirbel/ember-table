@@ -124,18 +124,28 @@ module.exports = function (grunt) {
           }, {
             expand: true,
             cwd: 'dependencies/',
-            src: ['**/*'],
+            src: ['**/*.js'],
             dest: 'gh_pages/lib'
           }, {
             expand: true,
             cwd: 'vendor/',
-            src: ['**/*'],
+            src: ['**/*.js'],
+            dest: 'gh_pages/lib'
+          }, {
+            expand: true,
+            cwd: 'dependencies/',
+            src: ['**/*.css'],
+            dest: 'gh_pages/lib'
+          }, {
+            expand: true,
+            cwd: 'vendor/',
+            src: ['**/*.css'],
             dest: 'gh_pages/lib'
           }, {
             expand: true,
             cwd: 'vendor/font-awesome/font/',
             src: ['**'],
-            dest: 'gh_pages/font'
+            dest: 'gh_pages/lib/font-awesome/font'
           }, {
             expand: true,
             cwd: 'app/assets/font/',

@@ -17,6 +17,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-release-it');
 
   // Project configuration.
   grunt.initConfig({
@@ -262,15 +263,31 @@ module.exports = function (grunt) {
         files: ["app/index.html"],
         tasks: ["copy"]
       }
+    },
+
+    "release-it": {
+      options: {
+        "pkgFiles": ["package.json", "bower.json"],
+        "commitMessage": "Release %s",
+        "tagName": "v%s",
+        "tagAnnotation": "Release %s",
+        "buildCommand": "grunt dist",
+        "distRepo": "-b gh-pages git@github.com:azirbel/ember-table",
+        "distStageDir": ".stage",
+        "distBase": "gh_pages",
+        "distFiles": ["**/*"],
+        "publish": false
+      }
     }
   });
 
-  // Default tasks.
+  // Build tasks
   grunt.registerTask("build_srcs", ["coffee:srcs", "emberTemplates", "neuter"]);
-
   grunt.registerTask("build_app", ["coffee:app", "emberTemplates", "neuter"]);
 
-  grunt.registerTask("dist", ["replace", "build_srcs", "build_app", "less", "copy", "uglify", "usebanner"]);
-
-  grunt.registerTask("default", ["bower", "replace", "build_srcs", "build_app", "less", "copy", "uglify", "usebanner", "watch"]);
+  // Tasks to be run by the user
+  grunt.registerTask("dist", ["bower", "replace", "build_srcs", "build_app", "less", "copy", "uglify", "usebanner"]);
+  grunt.registerTask("default", ["dist", "watch"]);
+  grunt.registerTask("release", function(n) { grunt.task.run("release-it:" + n) });
 };
+

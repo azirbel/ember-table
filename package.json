@@ -1,6 +1,6 @@
 {
   "name": "ember-chart",
-  "version": "0.2.8",
+  "version": "0.2.12",
   "private": true,
   "dependencies": {
     "glob-whatev": "*",

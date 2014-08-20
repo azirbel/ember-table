@@ -12,6 +12,6 @@
   "distRepo": "-b gh-pages git@github.com:azirbel/ember-table",
   "distStageDir": ".stage",
   "distBase": "gh_pages",
-  "distFiles": ["gh_pages/**/*"],
+  "distFiles": ["**/*"],
   "publish": false
 }

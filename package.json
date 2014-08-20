@@ -1,9 +1,0 @@
-{
-  "name": "ember-chart",
-  "version": "0.2.13",
-  "private": true,
-  "dependencies": {
-    "glob-whatev": "*",
-    "underscore": "*"
-  }
-}

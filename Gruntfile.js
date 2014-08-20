@@ -25,8 +25,10 @@ module.exports = function (grunt) {
     bower: {
       install: {
         options: {
-          cleanup: true,
-          layout: 'byComponent'
+          targetDir: 'vendor',
+          layout: 'byComponent',
+          verbose: true,
+          copy: false
         }
       }
     },
@@ -128,12 +130,24 @@ module.exports = function (grunt) {
           }, {
             expand: true,
             flatten: true,
+            cwd: 'vendor/',
+            src: ['**/*.js'],
+            dest: 'gh_pages/lib'
+          }, {
+            expand: true,
+            flatten: true,
             cwd: 'dependencies/',
             src: ['**/*.css'],
             dest: 'gh_pages/css'
           }, {
             expand: true,
-            cwd: 'lib/font-awesome/font/',
+            flatten: true,
+            cwd: 'vendor/',
+            src: ['**/*.css'],
+            dest: 'gh_pages/css'
+          }, {
+            expand: true,
+            cwd: 'vendor/font-awesome/font/',
             src: ['**'],
             dest: 'gh_pages/font'
           }, {
@@ -237,7 +251,7 @@ module.exports = function (grunt) {
         tasks: ["default"]
       },
       code: {
-        files: ["src/**/*.coffee", "app/**/*.coffee", "dependencies/**/*.js", "lib/**/*.js"],
+        files: ["src/**/*.coffee", "app/**/*.coffee", "dependencies/**/*.js", "vendor/**/*.js"],
         tasks: ["coffee", "neuter"]
       },
       handlebars: {

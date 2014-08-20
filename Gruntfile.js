@@ -123,28 +123,14 @@ module.exports = function (grunt) {
             dest: 'gh_pages/index.html'
           }, {
             expand: true,
-            flatten: true,
             cwd: 'dependencies/',
-            src: ['**/*.js'],
+            src: ['**/*'],
             dest: 'gh_pages/lib'
           }, {
             expand: true,
-            flatten: true,
             cwd: 'vendor/',
-            src: ['**/*.js'],
+            src: ['**/*'],
             dest: 'gh_pages/lib'
-          }, {
-            expand: true,
-            flatten: true,
-            cwd: 'dependencies/',
-            src: ['**/*.css'],
-            dest: 'gh_pages/css'
-          }, {
-            expand: true,
-            flatten: true,
-            cwd: 'vendor/',
-            src: ['**/*.css'],
-            dest: 'gh_pages/css'
           }, {
             expand: true,
             cwd: 'vendor/font-awesome/font/',

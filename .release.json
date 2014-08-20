@@ -9,9 +9,9 @@
   "tagName": "v%s",
   "tagAnnotation": "Release %s",
   "buildCommand": "grunt dist",
-  "distRepo": false,
+  "distRepo": "https://github.com/azirbel/ember-table-shim/tree/gh-pages",
   "distStageDir": ".stage",
-  "distBase": "",
-  "distFiles": ["dist/**/*"],
+  "distBase": "gh_pages",
+  "distFiles": ["**/*"],
   "publish": false
 }

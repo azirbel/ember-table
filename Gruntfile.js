@@ -271,6 +271,7 @@ module.exports = function (grunt) {
         "commitMessage": "Release %s",
         "tagName": "v%s",
         "tagAnnotation": "Release %s",
+        "increment": "patch",
         "buildCommand": "grunt dist",
         "distRepo": "-b gh-pages git@github.com:azirbel/ember-table",
         "distStageDir": ".stage",
@@ -285,9 +286,8 @@ module.exports = function (grunt) {
   grunt.registerTask("build_srcs", ["coffee:srcs", "emberTemplates", "neuter"]);
   grunt.registerTask("build_app", ["coffee:app", "emberTemplates", "neuter"]);
 
-  // Tasks to be run by the user
   grunt.registerTask("dist", ["bower", "replace", "build_srcs", "build_app", "less", "copy", "uglify", "usebanner"]);
+
   grunt.registerTask("default", ["dist", "watch"]);
-  grunt.registerTask("release", function(n) { grunt.task.run("release-it:" + n) });
 };
 

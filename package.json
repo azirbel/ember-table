@@ -1,6 +1,6 @@
 {
   "name": "ember-table",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "private": true,
   "main": "Gruntfile.js",
   "scripts": {
